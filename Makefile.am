@@ -24,11 +24,11 @@
 # Boston, MA 02110-1301, USA.
 #
 
-SUBDIRS = compat afm afmlib lib scripts intl src po states docs w32
+SUBDIRS = compat afm afmlib lib scripts intl src po states docs w32 gl
 
 EXTRA_DIST = README.ESCAPES README.DOS ascii.txt			\
 asciifise.txt asciidkno.txt 88591.txt 88592.txt 88593.txt 88594.txt	\
 88595.txt 88597.txt 88599.txt 885910.txt ibmpc.txt mac.txt vms.txt	\
 hp8.txt koi8.txt mtr.eps mtr_small.eps mtr_tiny.eps
 
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 -I gl/m4

@@ -6,11 +6,13 @@ AC_CONFIG_HEADERS([config.h])
 
 AM_INIT_AUTOMAKE
 
+AC_USE_SYSTEM_EXTENSIONS
+
 AC_PROG_INSTALL
 
 AC_PROG_CC
+gl_EARLY
 
-AC_USE_SYSTEM_EXTENSIONS
 AM_C_PROTOTYPES
 
 AC_C_CONST
@@ -118,6 +120,9 @@ dnl substitutions
 AC_SUBST(CFLAGS)
 AC_SUBST(LDFLAGS)
 
+# For gnulib.
+gl_INIT
+
 AC_CONFIG_FILES([Makefile  po/Makefile.in intl/Makefile po/Makefile \
 	compat/Makefile \
 	afm/Makefile \
@@ -130,7 +135,9 @@ AC_CONFIG_FILES([Makefile  po/Makefile.in intl/Makefile po/Makefile \
 	states/hl/Makefile \
 	states/tests/Makefile \
 	docs/Makefile \
-	w32/Makefile])
+	w32/Makefile \
+	gl/Makefile \
+	])
 
 AC_OUTPUT
 
