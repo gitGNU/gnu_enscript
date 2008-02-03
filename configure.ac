@@ -130,7 +130,7 @@ AC_CONFIG_FILES([Makefile  po/Makefile.in intl/Makefile po/Makefile \
 	states/hl/Makefile \
 	states/tests/Makefile \
 	docs/Makefile \
-	w32/Makefile])
+	])
 
 AC_OUTPUT
 

@@ -32,8 +32,6 @@ e_mac.c e_vms.c e_hp8.c e_koi8.c deffont.c
 
 noinst_HEADERS = afm.h afmint.h strhash.h
 
-INCLUDES_windelta = +-I../w32/
-
 EXTRA_DIST = ansi2knr.c ansi2knr.1 Makefile-encodings make-encoding.pl
 
 noinst_PROGRAMS = afmtest

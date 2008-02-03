@@ -31,11 +31,6 @@ AUTOMAKE_OPTIONS =
 bin_PROGRAMS = states
 
 states_SOURCES = main.c utils.c prims.c process.c gram.y lex.l
-states_SOURCES_windelta = \
-	-gram.y	\
-	+gram.c	\
-	-lex.l	\
-	+lex.c
 
 LDADD = ../afmlib/libafm.a @LIBINTL@ ../compat/libcompat.a @LEXLIB@
 states_DEPENDENCIES = ../compat/libcompat.a
@@ -58,6 +53,3 @@ AM_YFLAGS = -d
 INCLUDES = -I$(srcdir)/../compat -I$(srcdir)/../afmlib	\
 -I$(srcdir)/../intl -I../intl -DLOCALEDIR=\"$(localedir)\"
 
-INCLUDES_windelta = 	\
-	+-I../w32	\
-	--DLOCALEDIR=\"$(localedir)\"

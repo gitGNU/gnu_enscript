@@ -31,15 +31,9 @@ libcompat_a_SOURCES = getopt.c getopt1.c xalloc.c regex.c
 libcompat_a_LIBADD = @LIBOBJS@ @ALLOCA@
 libcompat_a_DEPENDENCIES = @LIBOBJS@ @ALLOCA@
 
-libcompat_a_SOURCES_windelta =	\
-	+../w32/gethostname.c	\
-	+../w32/getpwd.c	\
-	+../w32/getuid.c
-
 noinst_HEADERS = getopt.h regex.h xalloc.h
 
 EXTRA_DIST = strerror.c memmove.c memcpy.c strtol.c strtoul.c
 
 INCLUDES = -I$(srcdir)/../intl -I../intl
 
-INCLUDES_windelta = +-I../w32

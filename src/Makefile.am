@@ -32,10 +32,6 @@ bin_PROGRAMS = enscript mkafmmap
 
 enscript_SOURCES = main.c psgen.c util.c prt_lpr.c
 
-enscript_SOURCES_windelta = \
-	-prt_lpr.c	\
-	+prt_dos.c
-
 mkafmmap_SOURCES = mkafmmap.c
 
 LDADD = ../afmlib/libafm.a @LIBINTL@ ../compat/libcompat.a -lm
@@ -50,12 +46,4 @@ INCLUDES = -I$(srcdir)/../compat -I$(srcdir)/../afmlib			\
 -I$(srcdir)/../intl -I../intl -DLOCALEDIR=\"$(localedir)\"		\
 -DLIBRARY=\"$(datadir)/enscript\" -DSYSCONFDIR=\"$(sysconfdir)\"
 
-INCLUDES_windelta = \
-	+-I../w32	\
-	--DLOCALEDIR=\"$(localedir)\"		\
-	--DLIBRARY=\"$(datadir)/enscript\" 	\
-	--DSYSCONFDIR=\"$(sysconfdir)\"		\
-	+-DLIBRARY=\"c:\\enscript\"		\
-	+-DSYSCONFDIR=\"c:\\enscript\"
-
-EXTRA_DIST = prt_dos.c ansi2knr.c ansi2knr.1
+EXTRA_DIST = ansi2knr.c ansi2knr.1
