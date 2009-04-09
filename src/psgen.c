@@ -247,7 +247,7 @@ static int do_print = 1;
 static int user_fontp = 0;
 
 /* The user ^@font{}-defined font. */
-static char user_font_name[256];
+static char *user_font_name;
 static FontPoint user_font_pt;
 static InputEncoding user_font_encoding;
 
@@ -977,6 +977,7 @@ large for page\n"),
 			FATAL ((stderr,
 				_("user font encoding can be only the system's default or `ps'")));
 
+		      xrealloc(user_font_name, strlen(token.u.font.name) + 1);
 		      strcpy (user_font_name, token.u.font.name);
 		      user_font_pt.w = token.u.font.size.w;
 		      user_font_pt.h = token.u.font.size.h;
