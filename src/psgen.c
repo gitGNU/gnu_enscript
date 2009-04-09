@@ -1444,7 +1444,7 @@ read_special_escape (InputStream *is, Token *token)
 	  buf[i] = ch;
 	  if (i + 1 >= sizeof (buf))
 	    FATAL ((stderr, _("too long argument for %s escape:\n%.*s"),
-		    escapes[i].name, i, buf));
+		    escapes[e].name, i, buf));
 	}
       buf[i] = '\0';
 
