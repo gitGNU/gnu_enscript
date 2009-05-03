@@ -1,3 +1,8 @@
+2009-05-03  Brad Spencer  <spencer@starscale.com>
+
+	* enscript.st (namerules): Handle other common C++ header file
+	extensions.
+
 2009-01-25  Tim Retout  <diocles@gnu.org>
 
 	* javascript.st (Highlight): Add basic handling of regexes.
