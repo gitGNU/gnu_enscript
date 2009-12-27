@@ -1,3 +1,9 @@
+2009-12-27  Tim Retout  <tim@retout.co.uk>
+
+	Apply patch
+
+	* psgen.c: Use PATH_MAX 
+
 2009-12-27  Tim Retout  <diocles@gnu.org>
 
 	Apply patch from Debian Security Team for CAN-2004-1184.
@@ -11,6 +17,12 @@
 	and use shell_escape to quote contents.
 
 	* util.c (escape_string): Check return code of xmalloc.
+
+	Apply patch from Werner Fink to address CVE-2008-3863,
+	CVE-2008-4306.
+
+	* psgen.c: Use PATH_MAX for various buffer sizes.
+	Replace several strcpy calls with memset and strncpy.
 
 2009-03-28  Tim Retout  <diocles@gnu.org>
 
